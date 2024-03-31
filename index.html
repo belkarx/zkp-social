@@ -1,0 +1,32 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='main.css') }}">
+    <title>zkp.social</title>
+</head>
+<body>
+  <h2>zkp.social</h2>
+  <div class="container">
+  <div id="form1">
+    <form action="{{ url_for('next') }}" method="post">
+        <label for="secret">I know:</label>
+      <textarea rows="4" id="secret" name="secret" required></textarea>
+        <button type="submit">Next/Clear</button>
+    </form>
+    <div>
+    <form action="{{ url_for('done') }}" method="post">
+        <button type="submit">Done</button>
+    </form>
+      <p>never betray anyone's trust because you thought the gossip had already been shared again</p>
+      <p>powered by gpt-3.5 (openai doesn't use API data for training, ostensibly)</p>
+      <p> ~ clear before pressing done ~</p>
+    </div>
+</body>
+    <div class="footer"><a href="https://www.buymeacoffee.com/belkarx">buy me a coffee</a></div>
+</html>
+
+
